@@ -11,10 +11,18 @@ const theme = createTheme({
   },
 })
 
+// Determine base path for GitHub Pages
+// Vite's BASE_URL includes the trailing slash, but BrowserRouter basename should not
+const getBasePath = () => {
+  const baseUrl = import.meta.env.BASE_URL
+  // Remove trailing slash for BrowserRouter basename
+  return baseUrl === '/' ? '/' : baseUrl.slice(0, -1)
+}
+
 createRoot(document.getElementById('root')!).render(
   <StrictMode>
     <ThemeProvider theme={theme}>
-      <BrowserRouter>
+      <BrowserRouter basename={getBasePath()}>
         <App />
       </BrowserRouter>
     </ThemeProvider>
