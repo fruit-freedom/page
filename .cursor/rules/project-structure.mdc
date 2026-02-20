@@ -1,0 +1,17 @@
+---
+alwaysApply: true
+---
+# Project Structure
+
+This project follows a specific directory structure within the `src` directory:
+
+## Directory Organization
+
+- **pages/** - Contains page components and route-specific components
+- **shared/** - Contains shared components, utilities, and common code used across the application
+- **hooks/** - Contains custom React hooks
+
+When creating new files:
+- Page components should be placed in `pages/`
+- Reusable components and utilities should be placed in `shared/`
+- Custom React hooks should be placed in `hooks/`
