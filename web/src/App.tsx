@@ -1,15 +1,12 @@
-import { Routes, Route } from 'react-router-dom'
-import Layout from './shared/Layout'
-import EditPage from './pages/Edit'
+import FarmScene from './game/FarmScene'
+import Hud from './game/Hud'
 
 function App() {
   return (
-    <Routes>
-      <Route element={<Layout />}>
-        <Route path="/" element={<EditPage />} />
-        <Route path="/about" element={<div>About Page</div>} />
-      </Route>
-    </Routes>
+    <div style={{ position: 'relative', width: '100%', height: '100%' }}>
+      <FarmScene />
+      <Hud />
+    </div>
   )
 }
 
